@@ -1,0 +1,8 @@
+<h2 class="text-primary"><b>My Heroes</b></h2>
+<ul class="employees">
+  <li *ngFor="let empl of lst" (click)="onSelect(empl)">
+    <span class="badge">{{ empl.id }}</span> {{ empl.first_name }}
+  </li>
+</ul>
+<h2></h2>
+<router-outlet></router-outlet>

@@ -1,0 +1,30 @@
+<div class="container-fluid mb-5">
+  <form #userForm="ngForm">
+    <div class="form-group">
+      <label class="text-primary">FirstName:</label>
+      <input type="text" class="form-control" name="first_name" [(ngModel)]="selectedPaxList.first_name" />
+      <br />
+      <label class="text-primary">LastName:</label>
+      <input type="text" class="form-control" name="last_name" [(ngModel)]="selectedPaxList.last_name" />
+    </div>
+
+    <div class="md-form">
+      <label class="text-primary">EmailId: </label>
+      <input type="text" class="form-control" name="email" [(ngModel)]="selectedPaxList.email" />
+    </div>
+
+    <div class="form-group">
+      <label class="text-primary">Id: </label>
+      <input type="text" class="form-control form-control-sm" placeholder="Medium input" name="id" [(ngModel)]="selectedPaxList.id" />
+    </div>
+    <div class="form-group">
+      <label name="avatar" [(ngModel)]="selectedPaxList.avatar">DisplayPic:</label>
+      <div>
+        <img src="{{ selectedPaxList.avatar }}" />
+      </div>
+    </div>
+    <div class="btn-group">
+      <button (click)="subform()" class="text-success"><b>Save</b></button>
+    </div>
+  </form>
+</div>

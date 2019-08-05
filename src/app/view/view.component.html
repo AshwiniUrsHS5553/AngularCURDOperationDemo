@@ -1,0 +1,23 @@
+<div class="container-fluid mb-5">
+  <h3 class="text-primary">
+    <u><b>Details Of Selected Employee:</b></u>
+  </h3>
+  <div class="form-group"><label class="text-primary">Id: </label> {{ selectedPaxList.id }}</div>
+  <div class="form-group">
+    <label class="text-primary">Name: </label>
+    <span>{{ selectedPaxList.first_name }}</span>
+    {{ selectedPaxList.last_name }}
+  </div>
+  <div class="form-group"><label class="text-primary">Email-Id: </label>{{ selectedPaxList.email }}</div>
+
+  <div>
+    <img src="{{ selectedPaxList.avatar }}" />
+  </div>
+  <hr />
+  <div>
+    <button (click)="gobackHome()"><b>Back</b></button>
+    <button (click)="EditEmpl(selectedPaxList)"><b>Edit</b></button>
+    <button (click)="EmpDel()" class="text-danger"><b>Delete</b></button>
+  </div>
+</div>
+<router-outlet></router-outlet>
